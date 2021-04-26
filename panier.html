@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<link type="text/css" rel="stylesheet" href="../style/panier.css">
+<link type="text/css" rel="stylesheet" href="../style/chercherarticles.css">
+<link rel="icon" href="../images/logo1.jpg">
+<script src="../script/codepanier.js"></script>
+<script src="../script/data.js"></script>
+</head>
+ 
+<body onload="chargerPanier()">
+	<div id="connexion">
+<button id="connect"> Connexion </button>
+</div>
+ 
+<div class="head1">
+<a href="lool.html">
+</a> 
+</div>
+<div class="tired">
+<center><h1 class="sad"><marquee behavior="alternate">Les jouets.ma</marquee></h1></center>
+</div>
+
+<div class="button">
+<ul>
+<li><a  href="../index.html"><img src="../images/logo4.png" width="30px" height="30px"><b></b></a> </li>
+<li> <a href="articles.html">Articles </a></li> 
+ <li> <a href="panier.html">Panier </a></li> 
+ <li> <a href="contact.html">Contact </a></li> 
+ <li> <a href="inscription.html">Inscription </a></li> 
+</ul>
+</div>
+<section id ="content">
+<table id="panier"> 
+<tr><td>Nom</td><td>Prix</td><td>Quantité</td><td>Prix HT</td></tr>
+</table>
+<div id="montant"></div>
+</section>
+</section>
+<aside id="recherche">
+<form method="post" action="chercherarticles.html" onsubmit="recherche()">
+  <label> Rechercher</label>
+  <input type="search" id="search" size="15" />
+  <input type="submit" value = "Ok"/>
+</form>
+<form method="post" onclick="valideremail()">
+<input type="submit" value="Valider"/>
+</form>
+<script>
+//Cette fonction sert à rechercher les articles;
+function recherche()
+	{
+		var val=document.getElementById("search").value;
+		for(var i=0;i<catalogue.length;i++)
+		{
+			if(val==catalogue[i].nom)
+				{
+					document.write("Nom:"+catalogue[i].nom+"<br>");
+					document.write("Description:"+catalogue[i].desc+"<br>");
+					document.write("Prix:"+catalogue[i].prix+"<br>");
+				}
+		}
+	}
+//Cette fonction sert à envoyer un email pour confirmer l'envoi des articles dans 48 heures;
+function valideremail() {
+	Email.send({
+	Host: "smtp.gmail.com",
+	Username : "z.namasse@gmail.com",
+	Password : "moignon348skin",
+	To : 'z.namasse@gmail.com',
+	From : 'z.namasse@gmail.com',
+	Subject : "hola",
+	Body : "wooow",
+	}).then(
+		message => alert("La livraison se fera dans 48 heures")
+	);
+}
+</script>
+</aside>
+<footer>
+      <p>Namasse Zineb et Reggab Meryam, 2AP, groupe 2, Maârif, 2020</p>
+</footer>
+
+</body>
+</html>
