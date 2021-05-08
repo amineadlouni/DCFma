@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head> 
+<meta charset="utf-8"/>
+<title> Articles à commander </title>
+<link type="text/css" rel="stylesheet" href="../style/articles.css">
+<link rel="icon" href="../images/logo1.jpg">
+<script src="../script/codeboutique.js"></script>
+<script src="../script/data.js"></script>
+</head>
+<body onload ="chargerArticles()" onUnLoad="stockerPanier(monPanier)">
+
+
+
+   <div class="head1">
+   <a href="lool.html">
+</a> 
+</div>
+<div class="tired">
+<center><h1 class="sad"><marquee behavior="alternate">Les jouets.ma</marquee></h1></center>
+</div>
+
+<div class="button">
+<ul>
+<li><a  href="../index.html"><img src="../images/logo4.png" width="30px" height="30px"><b></b></a> </li>
+<li> <a href="articles.html">Articles </a></li> 
+ <li> <a href="panier.html">Panier </a></li> 
+ <li> <a href="contact.html">Contact </a></li> 
+ <li> <a href="inscription.html">Inscription </a></li> 
+</ul>
+</div>
+
+<div class="happy1">
+	<section id ="content">
+
+</section>
+
+<aside id="recherche">
+<form method="post" action="chercherarticles.html" onsubmit="recherche()">
+  <label> &nbsp Rechercher</label>
+  <input type="search" id="search" size="15" />
+  <input type="submit" value = "Ok"/>
+</form>
+</div>
+<script>
+//Cette fonction sert à rechercher les articles;
+function recherche()
+	{
+		var val=document.getElementById("search").value;
+		for(var i=0;i<catalogue.length;i++)
+		{
+			if(val==catalogue[i].nom)
+				{
+					document.write("Code:"+catalogue[i].code+"<br>");
+					document.write("Nom:"+catalogue[i].nom+"<br>");
+					document.write("Description:"+catalogue[i].desc+"<br>");
+					document.write("Prix:"+catalogue[i].prix+"<br>");
+				}
+		}
+	}
+
+</script>
+</aside>
+<div class="happy2">
+<footer>
+     <center><p>Namasse Zineb et Reggab Meryam, 2AP, groupe 2, Maârif, 2020</p></center>
+</footer>
+</div>
+</body>
+</html>
+
+
+

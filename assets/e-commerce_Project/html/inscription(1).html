@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head> 
+<meta charset="utf-8"/>
+<title> Articles à commander </title>
+<link type="text/css" rel="stylesheet" href="../style/inscription.css">
+<link type="text/css" rel="stylesheet" href="../style/chercherarticles.css">
+<link rel="icon" href="../images/logo1.jpg">
+<script src="../script/data.js"></script>
+<script src="../script/acces.js"></script>
+</head>
+<body >
+	<div class="head1">
+<a href="lool.html">
+</a> 
+</div>
+<div class="tired">
+<center><h1 class="sad"><marquee behavior="alternate">Les jouets.ma</marquee></h1></center>
+</div>
+
+<div class="button">
+<ul>
+<li><a  href="../index.html"><img src="../images/logo4.png" width="30px" height="30px"><b></b></a> </li>
+<li> <a href="articles.html">Articles </a></li> 
+ <li> <a href="panier.html">Panier </a></li> 
+ <li> <a href="contact.html">Contact </a></li> 
+ <li> <a href="inscription.html">Inscription </a></li> 
+</ul>
+</div>
+<div class="happy1">
+<section id ="content">
+ <form  id="inscription" method="post" action="compte.html" onsubmit="valider()"> 
+	<fieldset>
+	<legend> 1 </legend>
+	<label for="nom"> Nom 
+	<input type="text" name="nom" id="nom" /></label>
+	<label for="prenom"> Prénom 
+	<input type="text" name="prenom" id="prenom" /></label>
+	</fieldset>
+	<fieldset>
+	<legend>  2 Email et téléphone </legend>
+	<label for="email"> Email 
+	<input type="email" name="email" id="email" /> </label>
+	<label for="tel"> Tél 
+	<input type="tel" name="tel" id="tel" /> </label>
+	</fieldset>
+	<fieldset>
+     <legend> 3 Mot de Passe </legend>	
+	<label for="pwd"> Mot de passe 
+	<input type="password" name="pwd" id="pwd" /> </label>
+	<label for="pwd"> Confirmez le mot de passe 
+	<input type="password" name="pwdcopy" id="pwdcopy" /></label>
+	</fieldset>
+	<fieldset>
+	<input type="submit" value="Inscription" id="btnIns"/>
+	</fieldset>
+	</form> 
+</section>
+</div>
+<div class="happy2">
+<aside id="recherche">
+<form method="post" action="chercherarticles.html" onsubmit="recherche()">
+  <label>&nbsp Rechercher</label>
+  <input type="search" id="search" size="15" />
+  <input type="submit" value = "Ok"/>
+</form>
+<script>
+function recherche()
+	{
+		var val=document.getElementById("search").value;
+		for(var i=0;i<catalogue.length;i++)
+		{
+			if(val==catalogue[i].nom)
+				{
+					document.write("Nom:"+catalogue[i].nom+"<br>");
+					document.write("Description:"+catalogue[i].desc+"<br>");
+					document.write("Prix:"+catalogue[i].prix+"<br>");
+				}
+		}
+	}
+</script>
+</aside>
+<footer>
+   <center><p>Namasse Zineb et Reggab Meryam, 2AP, groupe 2, Maârif, 2020</p></center>
+</footer>
+</div>
+</body>
+</html>
+
+
+

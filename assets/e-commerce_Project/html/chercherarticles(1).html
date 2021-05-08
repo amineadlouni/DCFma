@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head> 
+<meta charset="utf-8"/>
+<title> Recherche Articles </title>
+<link rel="icon" href="../images/logo1.jpg"/>
+<link rel="stylesheet" href="../style/chercherarticles.css"/>
+<script src="../script/data.js"></script>
+</head>
+<body>
+<div class="head1">
+   <a href="lool.html">
+</a> 
+</div>
+<div class="tired">
+<center><h1 class="sad"><marquee behavior="alternate">Les jouets.ma</marquee></h1></center>
+</div>
+
+<div class="button">
+<ul>
+<li><a  href="../index.html"><img src="../images/logo4.png" width="30px" height="30px"/><b></b></a> </li>
+<li> <a href="articles.html">Articles </a></li> 
+ <li> <a href="panier.html">Panier </a></li> 
+ <li> <a href="contact.html">Contact </a></li> 
+ <li> <a href="inscription.html">Inscription </a></li> 
+</ul>
+</div>
+
+<div id="connexion">
+<button id="connect"> Connexion </button>
+</div>
+<section id ="content">
+<script>
+//Cette fonction sert à afficher les articles dans une autrepage;
+if(localStorage.length!=0)
+	{
+		var texte="";
+		texte=texte+localStorage.getItem("search")+"<br>";
+		document.write(texte);
+	}
+</script>
+</section>
+<aside id="recherche">
+<form>
+  <label> Rechercher</label>
+  <input type="search" id="search" size="15" />
+  <input type="button" value = "Ok" />
+</form>
+</aside>
+<footer>
+     <p>Namasse Zineb et Reggab Meryam, 2AP, groupe 2, Maârif, 2020</p>
+</footer>
+</body>
+</html>

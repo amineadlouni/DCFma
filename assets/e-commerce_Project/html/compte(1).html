@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head> 
+<meta charset="utf-8"/>
+<title> Votre compte </title>
+<link rel="icon" href="../images/logo1.jpg">
+<link rel="stylesheet" href="../style/compte.css">
+<link rel="stylesheet" href="../style/chercherarticles.css">
+<script src="../script/acces.js"></script>
+<script src="../script/data.js"></script>
+</head>
+<body>
+<div class="head1">
+   <a href="lool.html">
+</a> 
+</div>
+<div class="tired">
+<center><h1 class="sad"><marquee behavior="alternate">Les jouets.ma</marquee></h1></center>
+</div>
+
+<div class="button">
+<ul>
+<li><a  href="../index.html"><img src="../images/logo4.png" width="30px" height="30px"><b></b></a> </li>
+<li> <a href="articles.html">Articles </a></li> 
+ <li> <a href="panier.html">Panier </a></li> 
+ <li> <a href="contact.html">Contact </a></li> 
+ <li> <a href="inscription.html">Inscription </a></li> 
+</ul>
+</div>
+
+<section id ="content">
+<div id="informations">
+<p id="titre">Informations:</p>
+<script>
+if(localStorage.length!=0)
+	{
+	var texte="";
+	texte=texte+"Nom:"+localStorage.getItem("nom")+"<br>";
+	texte=texte+"Prénom:"+localStorage.getItem("prenom")+"<br>";
+	texte=texte+"Email:"+localStorage.getItem("email")+"<br>";
+	texte=texte+"Téléphone:"+localStorage.getItem("tel")+"<br>";
+	texte=texte+"Mot de passe:"+localStorage.getItem("pwd")+"<br>";
+	document.write(texte);
+	}
+	</script>
+     <!--cette section sera remplie par les informations du client stockées en local que vous allez charger ( en JavaScript)-->
+</div>
+</section>
+<aside id="recherche">
+<form method="post" action="chercherarticles.html" onsubmit="recherche()">
+  <label> Rechercher</label>
+  <input type="search" id="search" size="15" />
+  <input type="submit" value = "Ok"/>
+</form>
+<script>
+function recherche()
+	{
+		var val=document.getElementById("search").value;
+		for(var i=0;i<catalogue.length;i++)
+		{
+			if(val==catalogue[i].nom)
+				{
+					document.write("Nom:"+catalogue[i].nom+"<br>");
+					document.write("Description:"+catalogue[i].desc+"<br>");
+					document.write("Prix:"+catalogue[i].prix+"<br>");
+				}
+		}
+	}
+</script>
+</aside>
+<footer>
+     <p>Namasse Zineb et Reggab Meryam, 2AP, groupe 2, Maârif, 2020</p>
+</footer>
+
+</body>
+</html>
+
+
+

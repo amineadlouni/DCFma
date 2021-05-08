@@ -45,7 +45,7 @@ function chargerPanier() {
         for (var prop1 in tabPanier[i]) {
             // Créez un élément de type " td"
             var cellule2 = document.createElement("td");
-            // Précisez le texte de l'élément cellule2
+            // Précisez le texte de l'élément cellule
             cellule2.innerText = tabPanier[i][prop1];
             // Insérez cellule2 comme enfant de l'élément ligne
             ligne.appendChild(cellule2);

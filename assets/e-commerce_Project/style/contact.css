@@ -1,0 +1,91 @@
+ body {
+	background-color: #BEF4F6;
+	margin: 0px
+}
+
+.head1 { 
+border-style: solid;
+margin-bottom: 20px;
+margin-top: 0px;
+margin-left: 0px;
+margin-right: 0px;
+background-image: url(../images/logo1.jpg);
+background-size: cover;
+background-position:center;
+padding: 120px 110px;
+}
+.happy1{
+	border-style: solid;
+	border-color: black;
+	margin-bottom: 20px;
+    margin-top: 20px;
+    margin-left: 200px;
+    margin-right: 200px;
+	background-color:#A1F5F9;
+	padding:1px;
+	color: black;
+
+}
+.happy2 {
+	border-style: solid;
+	border-color: black;
+	margin-bottom: 20px;
+    margin-top: 20px;
+    margin-left: 200px;
+    margin-right: 200px;
+	background-color:#A1F5F9;
+	padding:1px;
+	color: black;
+}
+.sad {
+	font-size:60px;
+	color:black;
+	text-shadow: 6px 6px 10px rgba(0,0,255,0.7);
+	
+}
+.tired {
+	border-style: solid;
+	border-color: black;
+	margin-bottom: 20px;
+    margin-top: 20px;
+    margin-left: 200px;
+    margin-right: 200px;
+	background-color:#A1F5F9;
+	padding:1px;
+	color: red;
+}
+.button {
+background-color: #A1F5F9;
+margin-bottom: 20px;
+margin-top: 20px;
+margin-left: 200px;
+margin-right: 200px;
+padding: 9px 110px;
+}
+.button ul { 
+padding: 0;
+margin: 0;
+list-style-type: none;
+text-align: center;
+ 
+}
+.button li {
+	display: inline;
+padding:15px;
+vertical-align:middle;
+}
+
+.button a {
+   
+text-decoration:none;
+padding: 8px 8px 8px 8px;
+color: black;
+vertical-align:middle;
+}
+ 
+.button a:hover {
+ 
+color: black;
+background-color:white;
+ 
+}
